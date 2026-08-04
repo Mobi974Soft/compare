@@ -1,0 +1,17 @@
+node_modules
+.turbo
+.expo
+dist
+coverage
+.env
+.env.local
+.DS_Store
+*.log
+.npm-cache
+.pnpm-store
+.xdg-data
+.xdg-cache
+.expo-home
+dist-android
+*.tsbuildinfo
+supabase/.temp

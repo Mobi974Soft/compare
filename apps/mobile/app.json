@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "PrixPéi",
+    "slug": "prixpei",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "prixpei",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "fr.prixpei.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "La caméra permet de scanner le code-barres d’un produit.",
+        "NSLocationWhenInUseUsageDescription": "Votre position sert uniquement à trouver les magasins proches."
+      }
+    },
+    "android": {
+      "package": "fr.prixpei.app",
+      "permissions": ["CAMERA", "ACCESS_COARSE_LOCATION"]
+    },
+    "plugins": [
+      "expo-router",
+      ["expo-camera", { "cameraPermission": "Autoriser PrixPéi à scanner les codes-barres ?" }],
+      ["expo-location", { "locationWhenInUsePermission": "Votre position sert uniquement à trouver les magasins proches. Vous pouvez aussi sélectionner un magasin manuellement." }],
+      "expo-secure-store"
+    ],
+    "experiments": { "typedRoutes": true }
+  }
+}

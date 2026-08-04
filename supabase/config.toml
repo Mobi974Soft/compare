@@ -1,0 +1,26 @@
+project_id = "prixpei"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+
+[db]
+port = 54322
+major_version = 17
+
+[studio]
+enabled = true
+port = 54323
+
+[auth]
+enabled = true
+site_url = "prixpei://auth/callback"
+additional_redirect_urls = ["exp://127.0.0.1:8081/--/auth/callback"]
+
+[functions.scan-product]
+verify_jwt = false
+
+[functions.create-price-report]
+verify_jwt = true
